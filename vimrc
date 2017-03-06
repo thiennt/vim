@@ -6,6 +6,7 @@ colorscheme monokai
 " Misc {{{
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
+set clipboard=unnamedplus
 " }}}
 " Spaces & Tabs {{{
 set tabstop=2           " 4 space tab
@@ -29,6 +30,7 @@ set showmatch           " higlight matching parenthesis
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight all matches
+set gdefault
 " }}}
 " Folding {{{
 "=== folding ===
@@ -104,6 +106,14 @@ let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'do
 " Syntastic {{{
 let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_ignore_files = ['.java$']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 " }}}
 " Launch Config {{{
 runtime! debian.vim
