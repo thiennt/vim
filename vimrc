@@ -74,7 +74,7 @@ nnoremap <leader>a :Ag
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :set number!<CR>
 nnoremap <leader>d :Make! 
-nnoremap <leader>r :call RunTestFile()<CR>
+nnoremap <leader>r :CtrlPBufTag<CR>
 nnoremap <leader>g :call RunGoFile()<CR>
 vnoremap <leader>y "+y
 vmap v <Plug>(expand_region_expand)
