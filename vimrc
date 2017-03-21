@@ -7,6 +7,7 @@ colorscheme monokai
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
 set clipboard=unnamedplus
+set autochdir
 " }}}
 " Spaces & Tabs {{{
 set tabstop=2           " 4 space tab
@@ -97,8 +98,9 @@ set laststatus=2
 " CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|target/|\.(o|swp|pyc|egg)$'
+let g:NERDTreeChDirMode       = 2
+let g:ctrlp_working_path_mode = 'rw'
 " }}}
 " NERDTree {{{
 let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
