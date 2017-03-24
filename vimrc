@@ -8,6 +8,20 @@ set ttyfast                     " faster redraw
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set autochdir
+set autoread
+set paste
+" }}}
+" filename / dirname of the current file {{{
+" copy result to the system clipboard and echo the result
+" the cb> prompt means the clipboard
+" *f*ile *n*ame, ex. init.vim
+map <Leader>fn :let @+ = expand("%:t") \| echo 'cb> ' . @+<CR>
+" *f*ile *p*ath, ex. /home/user/nvim/init.vim
+map <Leader>fp :let @+ = expand("%:p") \| echo 'cb> ' . @+<CR>
+" *d*irectory *p*ath, ex. /home/user/nvim
+map <Leader>dp :let @+ = expand("%:p:h") \| echo 'cb> ' . @+<CR>
+" *d*irectory *n*ame, ex. nvim
+map <Leader>dn :let @+ = expand("%:p:h:t") \| echo 'cb> ' . @+<CR>
 " }}}
 " Spaces & Tabs {{{
 set tabstop=2           " 4 space tab
@@ -81,6 +95,7 @@ vnoremap <leader>y "+y
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 inoremap jk <esc>
+vnoremap // y/<C-R>"<CR>
 " }}}
 " Powerline {{{
 "set encoding=utf-8
