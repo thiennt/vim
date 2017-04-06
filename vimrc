@@ -96,6 +96,9 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 inoremap jk <esc>
 vnoremap // y/<C-R>"<CR>
+
+nnoremap <C-l> gt
+nnoremap <C-h> gT
 " }}}
 " Powerline {{{
 "set encoding=utf-8
